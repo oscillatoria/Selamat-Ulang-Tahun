@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#050b16;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* Background Glow */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at center,#00bfff22 0%,transparent 60%);
+    animation:bgPulse 5s infinite alternate;
+}
+
+@keyframes bgPulse{
+    from{transform:scale(1);}
+    to{transform:scale(1.08);}
+}
+
+/* Frame */
+
+.card{
+    width:90%;
+    max-width:420px;
+    border:2px solid #35d6ff;
+    border-radius:22px;
+    padding:30px;
+    position:relative;
+    text-align:center;
+    background:rgba(0,10,30,.7);
+    backdrop-filter:blur(10px);
+    box-shadow:
+        0 0 20px #00d9ff,
+        inset 0 0 20px #00d9ff33;
+}
+
+/* Crystal */
+
+.crystal{
+    font-size:60px;
+    color:#66e6ff;
+    text-shadow:
+        0 0 15px cyan,
+        0 0 35px cyan;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0);}
+}
+
+.title{
+    font-size:40px;
+    letter-spacing:4px;
+    margin-top:15px;
+}
+
+.version{
+    color:#7ddfff;
+    margin:12px 0 30px;
+}
+
+/* QR */
+
+.qr-box{
+    width:250px;
+    height:250px;
+    margin:auto;
+    border:3px solid #4de1ff;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 0 25px cyan;
+}
+
+.qr-box img{
+    width:100%;
+}
+
+/* Button */
+
+.play{
+    margin-top:30px;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    border:none;
+    background:#00bfff;
+    color:white;
+    font-size:32px;
+    cursor:pointer;
+    box-shadow:0 0 20px cyan;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 10px cyan;}
+    50%{box-shadow:0 0 35px cyan;}
+    100%{box-shadow:0 0 10px cyan;}
+}
+
+.unlock{
+    margin-top:25px;
+    color:#87ecff;
+    font-size:24px;
+}
+
+.quote{
+    margin-top:20px;
+    font-size:20px;
+    font-style:italic;
+}
+
+.footer{
+    margin-top:35px;
+    color:#79dfff;
+}
