@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monolog SAO</title>
+
+<style>
+body{
+    margin:0;
+    background:#0b1020;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+.card{
+    background:#1b2338;
+    padding:30px;
+    border-radius:20px;
+    width:90%;
+    max-width:400px;
+    box-shadow:0 0 20px cyan;
+}
+button{
+    margin-top:20px;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    background:#00c8ff;
+    color:white;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>Selamat Ulang Tahun</h1>
+<p>Terima kasih sudah memindai QR Code ini.</p>
+
+<button onclick="playAudio()">▶ Putar Monolog</button>
+
+<audio id="voice">
+<source src="voice.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+function playAudio(){
+document.getElementById("voice").play();
+}
+</script>
+
+</body>
+</html>
